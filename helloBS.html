@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="helloBS.css" rel="stylesheet"/>
 	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="helloBS.js"></script>
 </head>
 <body>
-	<h1>Hello, World</h1>
-	<div id="content">Nothing to see here yet...</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+					<a href="/" class="navbar-brand">Weasley's</a>
+			</div>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="helloBS.html">Customer Registration</a></li>
+			<li><a href="bar.html">Customer List</a></li>
+			<li><a href="bar.html">Customer List</a></li>
+			<li><a href="bar.html">Customer List</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h1>Hello, World</h1>
+		<div id="content">Nothing to see here yet...</div>
 
-	<form class="legal" onsubmit="return false;">
-		First Name: <input id="txtFirstName"/><br/>
-		Last Name: <input id="txtLastName"/><br/>
-		Phone Number: <input id="txtPhoneNumber"/><br/>
-		Birth Date: <input type="date" name="birthDate">
-		<button id="btnSubmit">Register</button>
-	</form>
+		<div class="row">
+			<div class="col-md-12">
+				<form class="legal" onsubmit="return false;">
+					<div class="container">
+							<div class="row">
+									<div class="col-md-6">First Name:</div>
+									<div class="col-md-6"><input id="txtFirstName"/></div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">Last Name: </div>
+									<div class="col-md-6"><input id="txtLastName"/></div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">Phone Number: </div>
+									<div class="col-md-6"><input id="txtPhoneNumber"/></div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">Birth Date: </div>
+									<div class="col-md-6"><input type="date" name="birthDate"></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><button id="btnSubmit" class="btn btn-default">Register</button></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 
-	<div id="myStatus"></div>
-	<span class="legal">&copy; 2016 Me.</span>
+		<div id="myStatus"></div>
+		<span class="legal">&copy; 2016 Me.</span>
+	</div>
 </body>
 </html>
