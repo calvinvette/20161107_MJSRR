@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-  $("#btnSubmit").click(function() {
+$("#btnSubmit").click(function() {
     var customer = {
         firstName : $("#txtFirstName").val(),
         lastName : $("#txtLastName").val(),

@@ -2,11 +2,9 @@
 // if customers is "falsey", instantiate as an empty array
 // if "truthy", then use it as-is.
 
-var customers = customers || [ ];
-
 function loadCustomers() {
   $.getJSON("http://nextgened.com/weasley/customers.json", function(data) {
-    debugger;
+    // debugger;
     window.customers = data;
     $(document).trigger("CustomersLoadedEvent");
   });
@@ -36,7 +34,7 @@ $(document).ready(function() {
     displayCustomers();
   });
   $(document).on("CustomerAddedEvent", function(evt, data) {
-    debugger;
+    // debugger;
     displayCustomers();
   });
 });
