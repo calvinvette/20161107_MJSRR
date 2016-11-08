@@ -6,13 +6,16 @@ var customers = customers || [ ];
 
 function loadCustomers() {
   $.getJSON("http://nextgened.com/weasley/customers.json", function(data) {
-    customers = data;
+    debugger;
+    window.customers = data;
     $(document).trigger("CustomersLoadedEvent");
   });
 }
 
 function displayCustomers() {
-  for (var cust of customers) {
+  // Reset the Customer Table to only the first row
+  $("#tblCustomers").html($("#tblCustomers tr")[0]);
+  for (var cust of window.customers) {
       // Find the table by id
       $("#tblCustomers").append("<tr>"
         + "<td>" + cust.customerId + "</td>"
@@ -24,8 +27,16 @@ function displayCustomers() {
 }
 
 $(document).ready(function() {
-  loadCustomers();
+  if (!window.customers || (window.customers.length == 0)) {
+    loadCustomers();
+  } else {
+    displayCustomers();
+  }
   $(document).on("CustomersLoadedEvent", function(evt) {
     displayCustomers();
   });
+  $(document).on("CustomersAddedEvent", function(evt) {
+    displayCustomers();
+  });
+
 });

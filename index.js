@@ -1,4 +1,6 @@
-var customers = [ ];
+"use strict";
+
+window.customers = [ ];
 
 function updateStatus(message) {
   $("#myStatus").html(message);
@@ -16,16 +18,5 @@ function jump(link) {
 }
 
 $(document).ready(function() {
-
-  $("#btnSubmit").click((evt) => {
-    var customer = {
-        firstName : $("#txtFirstName").val(),
-        lastName : $("#txtLastName").val(),
-        phoneNumber : $("#txtPhoneNumber").val()
-    };
-    customers.push(customer);
-    updateStatus("Registered " + customer.firstName + " " + customer.lastName + " @" + new Date());
-  });
-
   updateStatus("Successfully Loaded... @" + new Date());
 });
