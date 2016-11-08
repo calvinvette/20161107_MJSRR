@@ -35,8 +35,8 @@ $(document).ready(function() {
   $(document).on("CustomersLoadedEvent", function(evt) {
     displayCustomers();
   });
-  $(document).on("CustomersAddedEvent", function(evt) {
+  $(document).on("CustomerAddedEvent", function(evt, data) {
+    debugger;
     displayCustomers();
   });
-
 });
