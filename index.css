@@ -1,0 +1,14 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.legal {
+	font-family: Courier, "Courier New", "American Typewriter", monospaced;
+	font-size: 9pt;
+	color: steelblue;
+}
+
+#myStatus {
+	color: steelblue;
+	background-color: #00ff00;
+}
