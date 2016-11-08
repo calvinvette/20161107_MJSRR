@@ -1,6 +1,7 @@
 function loadCustomers() {
   $.getJSON("http://nextgened.com/weasley/customers.json", function(data) {
     customers = data;
+    displayCustomers();
   });
 }
 
@@ -18,5 +19,4 @@ function displayCustomers() {
 
 $(document).ready(function() {
   loadCustomers();
-      displayCustomers();
 });
